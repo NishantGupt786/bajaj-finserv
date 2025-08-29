@@ -84,3 +84,32 @@ Server will start on [http://localhost:3000](http://localhost:3000).
   "sum": "339",
   "concat_string": "Ra"
 }
+```
+
+## Testing
+
+Run the test suite: (To see if edge cases are handled)
+
+```bash
+npm test
+```
+
+### Test Results
+
+```
+ PASS  __tests__/bfhl.test.js
+  BFHL API Tests
+    ✓ should return health status (17 ms)
+    ✓ should process data correctly (11 ms)
+    ✓ should handle invalid input (2 ms)
+    ✓ should handle empty array (2 ms)
+    ✓ should handle numbers only (4 ms)
+    ✓ should handle alphabets only (7 ms)
+    ✓ should handle special characters only (2 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       7 passed, 7 total
+Snapshots:   0 total
+Time:        0.273 s, estimated 1 s
+Ran all test suites.
+```

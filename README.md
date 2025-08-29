@@ -12,6 +12,13 @@ It provides a `/bfhl` POST endpoint that processes an array of inputs and return
 
 ---
 
+## Deployment
+
+The API is hosted and publicly accessible at:  
+👉 [https://bajaj-finserv-qi96.onrender.com/bfhl](https://bajaj-finserv-qi96.onrender.com/bfhl)
+
+---
+
 ## Features
 - Accepts a JSON payload with an array of data.
 - Separates numbers into **even** and **odd**.

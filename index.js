@@ -73,4 +73,4 @@ app.post("/bfhl", (req, res) => {
 })
 
 const PORT = process.env.PORT || 3000
-app.listen(PORT, () => console.log(`🚀 BFHL API running at http://localhost:${PORT}/bfhl`))
+app.listen(PORT, () => console.log(`BFHL API running at http://localhost:${PORT}/bfhl`))

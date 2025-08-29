@@ -4,9 +4,9 @@ require("dotenv").config()
 
 const app = express()
 app.use(express.json())
-app.use(helmet()) //for attaching various HTTP headers for app security
+app.use(helmet())
 
-const cache = new Map() // simple caching mechanism didnt want to go overboard with redis or memcached for this small project
+const cache = new Map()
 
 app.get("/", (req, res) => {
   res.json({ status: "ok" })
@@ -72,5 +72,9 @@ app.post("/bfhl", (req, res) => {
   }
 })
 
-const PORT = process.env.PORT || 3000
-app.listen(PORT, () => console.log(`BFHL API running at http://localhost:${PORT}/bfhl`))
+if (require.main === module) {
+  const PORT = process.env.PORT || 3000
+  app.listen(PORT, () => console.log(`🚀 BFHL API running at http://localhost:${PORT}/bfhl`))
+}
+
+module.exports = app

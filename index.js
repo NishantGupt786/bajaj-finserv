@@ -4,9 +4,9 @@ require("dotenv").config()
 
 const app = express()
 app.use(express.json())
-app.use(helmet())
+app.use(helmet()) //for attaching various HTTP headers for app security
 
-const cache = new Map()
+const cache = new Map() // simple caching mechanism didnt want to go overboard with redis or memcached for this small project
 
 app.get("/", (req, res) => {
   res.json({ status: "ok" })
